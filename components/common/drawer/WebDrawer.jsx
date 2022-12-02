@@ -11,12 +11,8 @@ import {
   useColorModeValue
 } from "@chakra-ui/react";
 import WebSubNav from "./WebSubNav";
-import { ColorModeSwitcher } from "../theme/ColorModeSwitcher";
 
 export default function WebDrawer({ links }) {
-  const linkColor = useColorModeValue('gray.500', 'gray.200');
-  const linkHoverColor = useColorModeValue('gray.900', 'white');
-  const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
   return (
     <Flex w="100%" py={4} align="center" justify="space-around">
@@ -30,10 +26,10 @@ export default function WebDrawer({ links }) {
                   href={item.href ?? '#'}
                   fontSize={'sm'}
                   fontWeight={500}
-                  color={linkColor}
+                  color={useColorModeValue('blue.800', 'blue.800')}
                   _hover={{
                     textDecoration: 'none',
-                    color: linkHoverColor,
+                    color: useColorModeValue('blue.400', 'blue.400'),
                   }}
                 >
                   <Button variant="nav"> {item.label} </Button>
@@ -44,9 +40,9 @@ export default function WebDrawer({ links }) {
                 <PopoverContent
                   border={1}
                   borderStyle={'solid'}
-                  borderColor={'green.400'}
+                  borderColor={'blue.800'}
                   boxShadow={'xl'}
-                  bg={popoverContentBgColor}
+                  bg={useColorModeValue('white', 'white')}
                   mt={10}
                   p={4}
                   rounded={'xl'}

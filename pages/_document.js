@@ -8,10 +8,10 @@ export default function Document() {
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={"true"} />
+        <title>Implica-te - Fundatia E-Learning</title>
         <link
           href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap"
           rel="stylesheet" />
-        <title>Implica-te - Fundatia E-Learning</title>
         <meta name="description" content="e-learning platform" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

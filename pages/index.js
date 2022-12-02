@@ -4,10 +4,11 @@ import Drawer from "../components/common/drawer/Drawer";
 // import { useTranslation } from "next-i18next";
 // import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 // import { useRouter } from "next/router";
-import { Box, Container, Flex } from "@chakra-ui/react";
+import { Box, Container, Flex, Image, SimpleGrid } from "@chakra-ui/react";
 import HeroSection from "./landing/HeroSection";
 import StatisticsSection from "./landing/StatisticsSection";
-import { Footer } from '../components/common';
+import { Footer } from '../components';
+import PartnerCardWithAvatar from "../components/partners/PartnerCardWithAvatar";
 
 const drawerLinks = [
   // {
@@ -70,12 +71,14 @@ export default function Home() {
         <HeroSection />
         <Container maxW='8xl'>
           <StatisticsSection />
+          <PartnerCardWithAvatar />
         </Container>
       </Flex>
 
       <footer>
         <Footer />
       </footer>
+
     </Box>
   )
 }

@@ -9,12 +9,12 @@ export default function WebSubNav({ label, href, subLabel }) {
       display={'block'}
       p={2}
       rounded={'md'}
-      _hover={{ bg: useColorModeValue('green.100', 'gray.900') }}>
+      _hover={{ bg: useColorModeValue('blue.50', 'blue.50') }}>
       <Stack direction={'row'} align={'center'}>
         <Box>
           <Text
             transition={'all .3s ease'}
-            _groupHover={{ color: 'green.400' }}
+            _groupHover={{ color: 'blue.800' }}
             fontWeight={600}>
             {label}
           </Text>
@@ -28,7 +28,7 @@ export default function WebSubNav({ label, href, subLabel }) {
           justify={'flex-end'}
           align={'center'}
           flex={1}>
-          <Icon color={'pink.400'} w={5} h={5} as={MdChevronRight} />
+          <Icon color={'blue.800'} w={5} h={5} as={MdChevronRight} />
         </Flex>
       </Stack>
     </Link>
