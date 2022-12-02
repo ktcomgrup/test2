@@ -12,12 +12,11 @@ import WebDrawer from "./WebDrawer";
 import Logo from "../theme/Logo";
 import MobileDrawer from "./MobileDrawer";
 import styles from "../../../styles/components/common/Drawer.module.scss";
-import { ColorModeSwitcher } from "../theme/ColorModeSwitcher";
 
 export default function Drawer({ links = [] }) {
   const { isOpen, onToggle } = useDisclosure();
   return (
-    <div className={styles.drawer}>
+    <div className={styles.drawer} id={'top-drawer'}>
       <Box
         w={'full'}
         overflow={"hidden"}
@@ -49,7 +48,7 @@ export default function Drawer({ links = [] }) {
           <Flex flex={{ base: 1 }} justify={{ base: 'end', md: 'space-around' }} alignItems={'center'} zIndex={99}>
             <Flex>
               <Link href={"/"}>
-                <Logo h={{ base: 8, sm: 8, md: 10, lg: "100px" }} minWidth={{ md: "90px" }} w />
+                <Logo h={{ base: 8, sm: 8, md: 10, lg: "100px" }} minWidth={{ md: "90px" }} />
               </Link>
             </Flex>
             <Flex display={{ base: 'none', md: 'flex' }}>

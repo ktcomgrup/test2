@@ -4,9 +4,10 @@ import Drawer from "../components/common/drawer/Drawer";
 // import { useTranslation } from "next-i18next";
 // import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 // import { useRouter } from "next/router";
-import { Box, Container, Flex, Select } from "@chakra-ui/react";
+import { Box, Container, Flex } from "@chakra-ui/react";
 import HeroSection from "./landing/HeroSection";
 import StatisticsSection from "./landing/StatisticsSection";
+import { Footer } from '../components/common';
 
 const drawerLinks = [
   // {
@@ -59,25 +60,23 @@ export default function Home() {
   // };
 
   return (
-    <div>
+    <Box h={'100%'} minH={'100vh'} id={'main-box'}>
       {/*<Select onChange={handleLocaleChange} value={router.locale}>*/}
       {/*  <option value='ro'>Romana</option>*/}
       {/*  <option value='en'>English</option>*/}
       {/*</Select>*/}
-      <div>
-        <Drawer links={drawerLinks} />
-        <Flex w="100%" flexDirection={"column"}>
-          <HeroSection />
-          <Container maxW='8xl'>
-            <StatisticsSection />
-          </Container>
-        </Flex>
-      </div>
+      <Drawer links={drawerLinks} />
+      <Flex w="100%" flexDirection={"column"} minH={'100vh'} id={'content-box'}>
+        <HeroSection />
+        <Container maxW='8xl'>
+          <StatisticsSection />
+        </Container>
+      </Flex>
 
       <footer>
-        {/*footer*/}
+        <Footer />
       </footer>
-    </div>
+    </Box>
   )
 }
 
