@@ -9,6 +9,8 @@ import HeroSection from "./landing/HeroSection";
 import StatisticsSection from "./landing/StatisticsSection";
 import { Footer } from '../components';
 import PartnerCardWithAvatar from "../components/partners/PartnerCardWithAvatar";
+import { useEffect, useState } from "react";
+import MainLoader from "../components/common/loader/MainLoader";
 
 const drawerLinks = [
   // {
@@ -50,7 +52,7 @@ const drawerLinks = [
   }
 ];
 
-export default function Home() {
+export default function Index() {
   // const router = useRouter();
   // const { t } = useTranslation("home");
   //
@@ -60,26 +62,42 @@ export default function Home() {
   //   });
   // };
 
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setTimeout(() => setLoading(true), 2500);
+  }, []);
+
   return (
-    <Box h={'100%'} minH={'100vh'} id={'main-box'}>
-      {/*<Select onChange={handleLocaleChange} value={router.locale}>*/}
-      {/*  <option value='ro'>Romana</option>*/}
-      {/*  <option value='en'>English</option>*/}
-      {/*</Select>*/}
-      <Drawer links={drawerLinks} />
-      <Flex w="100%" flexDirection={"column"} minH={'100vh'} id={'content-box'}>
-        <HeroSection />
-        <Container maxW='8xl'>
-          <StatisticsSection />
-          <PartnerCardWithAvatar />
-        </Container>
-      </Flex>
+    <>
+      {
+        !!loading ? (
+          <Box h={'100%'} minH={'100vh'} id={'main-box'}>
+            {/*<Select onChange={handleLocaleChange} value={router.locale}>*/}
+            {/*  <option value='ro'>Romana</option>*/}
+            {/*  <option value='en'>English</option>*/}
+            {/*</Select>*/}
+            <Drawer links={drawerLinks} />
+            <Flex w="100%" flexDirection={"column"} minH={'100vh'} id={'content-box'}>
+              {/*<HeroSection />*/}
+              <Container maxW='8xl'>
+                <StatisticsSection />
+                <PartnerCardWithAvatar />
+              </Container>
+            </Flex>
 
-      <footer>
-        <Footer />
-      </footer>
+            <footer>
+              <Footer />
+            </footer>
 
-    </Box>
+          </Box>
+        ) : (
+          <MainLoader text={"Prioritatea nostră ești tu."}/>
+        )
+      }
+
+    </>
+
+
   )
 }
 

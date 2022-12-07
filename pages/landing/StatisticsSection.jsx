@@ -55,7 +55,7 @@ export default function StatisticsSection() {
               textAlign={"center"}
               mb={6}
               color={useColorModeValue('primary.800', 'primary.800')}>
-              Rezultate proiectelor noastre
+              Rezultatele proiectelor noastre
             </Heading>
 
             <SimpleGrid
