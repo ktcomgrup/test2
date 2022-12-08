@@ -16,6 +16,7 @@ import { ColorModeSwitcher } from "../theme";
 export default function WebDrawer({ links, linkColor }) {
   const linkC = useColorModeValue(linkColor, linkColor);
   const linkColorHover = useColorModeValue('primary.400', 'gold.100');
+  const popoverContentBgColor = useColorModeValue('white', 'white');
 
   return (
     <Flex w="100%" py={4} align="center" justify="space-around">
@@ -43,9 +44,9 @@ export default function WebDrawer({ links, linkColor }) {
                 <PopoverContent
                   border={1}
                   borderStyle={'solid'}
-                  borderColor={'blue.800'}
+                  // borderColor={'blue.800'}
                   boxShadow={'xl'}
-                  bg={useColorModeValue('white', 'white')}
+                  bg={popoverContentBgColor}
                   mt={10}
                   p={4}
                   rounded={'xl'}
