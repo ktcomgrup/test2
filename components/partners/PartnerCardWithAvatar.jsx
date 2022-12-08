@@ -57,7 +57,7 @@ const PartnerCardText = ({ children }) => {
 const PartnerCardTextImage = ({ src, name, title, }) => {
   return (
     <Flex align={'center'} mt={8} direction={'column'}>
-      <Image src={src} w={60} h={'auto'} />
+      <Image src={src} w={60} h={'auto'} alt={"card-image"}/>
     </Flex>
   );
 };

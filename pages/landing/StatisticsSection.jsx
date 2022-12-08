@@ -68,22 +68,27 @@ export default function StatisticsSection() {
               <Image
                 src={'/images/squircle_2.svg'} h={'100%'} display={{ base: "none", md: "inline-block" }}
                 position={"relative"} top={'-100px'}
+                alt={"squircle"}
               />
               <Image
                 src={'/images/squircle_3.svg'} h={'100%'} display={{ base: "none", md: "inline-block" }}
                 position={"relative"} top={'-80px'}
+                alt={"squircle"}
               />
               <Image
                 src={'/images/squircle_1.svg'} h={'100%'} display={{ base: "none", md: "inline-block" }}
                 position={"relative"} top={'-90px'}
+                alt={"squircle"}
               />
               <Image
                 src={'/images/squircle_1.svg'} h={'100%'} display={{ base: "none", md: "inline-block" }}
                 position={"relative"} top={'-95px'}
+                alt={"squircle"}
               />
               <Image
                 src={'/images/squircle_0.svg'} h={'100%'} display={{ base: "none", md: "inline-block" }}
                 position={"relative"} top={'-100px'}
+                alt={"squircle"}
               />
             </SimpleGrid>
 

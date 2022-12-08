@@ -1,6 +1,7 @@
 import { Box, Heading, Image, useColorModeValue, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Logo from "../theme/Logo";
+import { useState } from "react";
 
 // const imageVariants = {
 //   // hidden: { rotate: 360 },
@@ -70,6 +71,7 @@ const textVariants = {
 
 export default function MainLoader({ text }) {
   const themeText = useColorModeValue('dark', 'light');
+  const colorText = useColorModeValue('primary.800', 'gold.200');
   const letters = Array.from(text);
   return (
     <>
@@ -120,7 +122,7 @@ export default function MainLoader({ text }) {
                     as={motion.span}
                     variants={textVariants}
                     size={{ base: "md", md: "xl" }}
-                    color={useColorModeValue('primary.800', 'gold.200')}
+                    color={colorText}
                   >
                     {letter === " " ? "\u00A0" : letter}
                   </Heading>

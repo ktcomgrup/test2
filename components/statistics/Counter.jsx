@@ -13,7 +13,7 @@ export default function Counter(props) {
       }
     });
     return () => controls.stop();
-  }, [from, to]);
+  }, [from, to, duration]);
 
   return <Heading ref={counterRef} color={useColorModeValue('white', 'white')} {...rest} />;
 }
