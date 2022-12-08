@@ -11,9 +11,16 @@ import {
   useColorModeValue
 } from "@chakra-ui/react";
 import WebSubNav from "./WebSubNav";
+import { ColorModeSwitcher } from "../theme";
 
-export default function WebDrawer({ links }) {
-
+export default function WebDrawer({ links, linkColor }) {
+  const callbackGetTheme = (theme) => {
+    if (theme === "dark") {
+      setHeaderLogoUrl("/logo_gold.svg")
+    } else {
+      setHeaderLogoUrl("/logo.svg")
+    }
+  }
   return (
     <Flex w="100%" py={4} align="center" justify="space-around">
       <HStack as="nav">
@@ -26,10 +33,10 @@ export default function WebDrawer({ links }) {
                   href={item.href ?? '#'}
                   fontSize={'sm'}
                   fontWeight={500}
-                  color={useColorModeValue('blue.800', 'blue.800')}
+                  color={useColorModeValue(linkColor, linkColor)}
                   _hover={{
                     textDecoration: 'none',
-                    color: useColorModeValue('blue.400', 'blue.400'),
+                    color: useColorModeValue('primary.400', 'gold.100'),
                   }}
                 >
                   <Button variant="nav"> {item.label} </Button>
@@ -58,7 +65,7 @@ export default function WebDrawer({ links }) {
             </Popover>
           </Box>
         ))}
-        {/*<ColorModeSwitcher />*/}
+        <ColorModeSwitcher getTheme={callbackGetTheme} />
         <Link
           href={"#contact-us"}
           _hover={{
@@ -67,11 +74,11 @@ export default function WebDrawer({ links }) {
         >
           <Button
             variant="nav"
-            bg={'#193877'}
-            color={'white'}
+            bg={useColorModeValue('primary.700', 'gold.200')}
+            color={useColorModeValue('white', 'secondary.800')}
             _hover={{
-              bg: 'gray.300',
-              color: '#193877',
+              bg: useColorModeValue('primary.800', 'gold.300'),
+              color: useColorModeValue('white', 'secondary.800'),
               transform: 'translateY(-2px)',
               boxShadow: 'lg',
             }}

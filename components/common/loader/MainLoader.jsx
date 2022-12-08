@@ -1,5 +1,6 @@
-import { Box, Container, Heading, Image } from "@chakra-ui/react";
+import { Box, Heading, Image, useColorModeValue, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import Logo from "../theme/Logo";
 
 // const imageVariants = {
 //   // hidden: { rotate: 360 },
@@ -68,13 +69,13 @@ const textVariants = {
 }
 
 export default function MainLoader({ text }) {
+  const themeText = useColorModeValue('dark', 'light');
   const letters = Array.from(text);
-
   return (
     <>
-      <Container
-        maxW={'full'}
-        h={'100vh'}
+      <VStack
+        id={"loader"}
+        h={"100vh"}
         display={"flex"}
         flexDirection={"column"}
         flexWrap={"wrap"}
@@ -98,11 +99,13 @@ export default function MainLoader({ text }) {
             variants={textVariants}
             m={4}
           >
-            <Image src='logo.svg' alt='E-Learning Logo' maxW={{ base: "200", lg: "250" }} />
+            <Logo maxW={{ base: "200", lg: "250" }} minWidth={{ md: "90px" }}
+                  logoUrl={themeText === "dark" ? "./logo.svg" : "./logo_gold.svg"} />
           </Box>
           <Box
             as={motion.div}
             display={"flex"}
+            flexWrap={"wrap"}
             variants={containerVariants}
             initial={"hidden"}
             animate={"visible"}
@@ -116,6 +119,8 @@ export default function MainLoader({ text }) {
                     key={`letter-${idx}`}
                     as={motion.span}
                     variants={textVariants}
+                    size={{ base: "md", md: "xl" }}
+                    color={useColorModeValue('primary.800', 'gold.200')}
                   >
                     {letter === " " ? "\u00A0" : letter}
                   </Heading>
@@ -124,7 +129,7 @@ export default function MainLoader({ text }) {
             }
           </Box>
         </Box>
-      </Container>
+      </VStack>
     </>
   )
 }

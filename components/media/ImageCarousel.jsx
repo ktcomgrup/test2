@@ -96,7 +96,7 @@ export default function ImageCarousel() {
           as={motion.div}
           initial={fadeIn.initial}
           animate={fadeIn.animate}
-          transition={fadeIn.animate}
+          transition={fadeIn.transition}
         >
           <link
             rel="stylesheet"

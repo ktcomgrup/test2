@@ -1,7 +1,7 @@
 import { Collapse, Flex, Icon, Link, Stack, Text, useColorModeValue, useDisclosure } from "@chakra-ui/react";
 import { FaChevronDown } from "react-icons/fa";
 
-export default function MobileNavItem({ label, children, href }) {
+export default function MobileNavItem({ label, linkColor, href, children }) {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
@@ -17,7 +17,7 @@ export default function MobileNavItem({ label, children, href }) {
         }}>
         <Text
           fontWeight={600}
-          color={useColorModeValue('gray.600', 'gray.200')}>
+          color={useColorModeValue(linkColor, linkColor)}>
           {label}
         </Text>
         {children && (
@@ -25,6 +25,7 @@ export default function MobileNavItem({ label, children, href }) {
             as={FaChevronDown}
             transition={'all .25s ease-in-out'}
             transform={isOpen ? 'rotate(180deg)' : ''}
+            variant={"ghost" }
             w={6}
             h={6}
           />
@@ -41,7 +42,7 @@ export default function MobileNavItem({ label, children, href }) {
           align={'start'}>
           {children &&
             children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
+              <Link key={child.label} py={2} href={child.href} color={useColorModeValue(linkColor, linkColor)}>
                 {child.label}
               </Link>
             ))}

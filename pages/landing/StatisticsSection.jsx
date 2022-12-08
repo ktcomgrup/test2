@@ -47,9 +47,9 @@ export default function StatisticsSection() {
             mb={10}
             position={"relative"}
             as={motion.div}
-            initial={fadeIn.initial}
-            animate={fadeIn.animate}
-            transition={fadeIn.animate}
+            variants={fadeIn}
+            initial={"hidden"}
+            animate={"visible"}
           >
             <Heading
               textAlign={"center"}
@@ -78,12 +78,12 @@ export default function StatisticsSection() {
                 position={"relative"} top={'-90px'}
               />
               <Image
-                src={'/images/squircle_0.svg'} h={'100%'} display={{ base: "none", md: "inline-block" }}
-                position={"relative"} top={'-100px'}
-              />
-              <Image
                 src={'/images/squircle_1.svg'} h={'100%'} display={{ base: "none", md: "inline-block" }}
                 position={"relative"} top={'-95px'}
+              />
+              <Image
+                src={'/images/squircle_0.svg'} h={'100%'} display={{ base: "none", md: "inline-block" }}
+                position={"relative"} top={'-100px'}
               />
             </SimpleGrid>
 

@@ -2,10 +2,11 @@ import { Box, Container, Flex, Stack, Text, useColorModeValue, } from '@chakra-u
 import Logo from "../theme/Logo";
 
 export function Footer() {
+  const themeText = useColorModeValue('dark', 'light');
   return (
     <Box
-      bg={useColorModeValue('blue.50', 'blue.900')}
-      color={useColorModeValue('blue.800', 'blue.200')}>
+      bg={useColorModeValue('white', 'secondary.800')}
+      color={useColorModeValue('primary.800', 'gold.200')}>
       <Container
         as={Stack}
         maxW={'6xl'}
@@ -14,7 +15,8 @@ export function Footer() {
         spacing={4}
         justify={{ base: 'center' }}
         align={{ base: 'center', md: 'center' }}>
-        <Logo h={{ base: 8, sm: 8, md: 10, lg: "60px" }} minWidth={{ md: "90px" }} />
+        <Logo h={{ base: 16, sm: 16, md: 10, lg: "60px" }} minWidth={{ md: "90px" }}
+              logoUrl={themeText === "dark" ? "./logo.svg" : "./logo_gold.svg"} />
         <Flex direction={{ base: "column", md: "row" }}>
           <Text textAlign={"center"}>© 2022 E-Learning Foundation.&nbsp;</Text>
           <Text textAlign={"center"}>Toate drepturile rezervate</Text>
