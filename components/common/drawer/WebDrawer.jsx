@@ -14,13 +14,9 @@ import WebSubNav from "./WebSubNav";
 import { ColorModeSwitcher } from "../theme";
 
 export default function WebDrawer({ links, linkColor }) {
-  const callbackGetTheme = (theme) => {
-    if (theme === "dark") {
-      setHeaderLogoUrl("/logo_gold.svg")
-    } else {
-      setHeaderLogoUrl("/logo.svg")
-    }
-  }
+  const linkC = useColorModeValue(linkColor, linkColor);
+  const linkColorHover = useColorModeValue('primary.400', 'gold.100');
+
   return (
     <Flex w="100%" py={4} align="center" justify="space-around">
       <HStack as="nav">
@@ -33,10 +29,10 @@ export default function WebDrawer({ links, linkColor }) {
                   href={item.href ?? '#'}
                   fontSize={'sm'}
                   fontWeight={500}
-                  color={useColorModeValue(linkColor, linkColor)}
+                  color={linkC}
                   _hover={{
                     textDecoration: 'none',
-                    color: useColorModeValue('primary.400', 'gold.100'),
+                    color: linkColorHover,
                   }}
                 >
                   <Button variant="nav"> {item.label} </Button>
@@ -65,7 +61,7 @@ export default function WebDrawer({ links, linkColor }) {
             </Popover>
           </Box>
         ))}
-        <ColorModeSwitcher getTheme={callbackGetTheme} />
+        <ColorModeSwitcher />
         <Link
           href={"#contact-us"}
           _hover={{

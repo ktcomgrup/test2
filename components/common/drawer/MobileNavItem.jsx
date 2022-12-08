@@ -3,6 +3,7 @@ import { FaChevronDown } from "react-icons/fa";
 
 export default function MobileNavItem({ label, linkColor, href, children }) {
   const { isOpen, onToggle } = useDisclosure();
+  const linkC = useColorModeValue(linkColor, linkColor);
 
   return (
     <Stack spacing={4} onClick={children && onToggle}>
@@ -42,7 +43,7 @@ export default function MobileNavItem({ label, linkColor, href, children }) {
           align={'start'}>
           {children &&
             children.map((child) => (
-              <Link key={child.label} py={2} href={child.href} color={useColorModeValue(linkColor, linkColor)}>
+              <Link key={child.label} py={2} href={child.href} color={linkC}>
                 {child.label}
               </Link>
             ))}

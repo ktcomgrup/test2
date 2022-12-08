@@ -47,6 +47,7 @@ const statistics = [
 
 export default function HeroSection() {
   const [isLargerThan850] = useMediaQuery('(min-width: 850px)');
+  const statisticsHeadingColor = useColorModeValue('whiteAlpha.700', 'whiteAlpha.700');
   return (
     <Box>
       <Flex
@@ -96,7 +97,7 @@ export default function HeroSection() {
                 bg={useColorModeValue('primary.800', 'gold.200')}
                 rounded={'full'}
                 color={useColorModeValue('white', 'primary.800')}
-                fontSize={{base: 14, md: 18}}
+                fontSize={{ base: 14, md: 18 }}
                 minW={36}
                 _hover={{ bg: useColorModeValue('primary.900', 'gold.300') }}>
                 Alătură-te
@@ -111,7 +112,7 @@ export default function HeroSection() {
                 bg={'whiteAlpha.300'}
                 rounded={'full'}
                 color={'white'}
-                fontSize={{base: "14", md: 18}}
+                fontSize={{ base: "14", md: 18 }}
                 minW={36}
                 _hover={{ bg: 'whiteAlpha.500' }}>
                 Contactează-ne
@@ -139,7 +140,7 @@ export default function HeroSection() {
                             </Flex>
                             <Heading
                               size='md'
-                              color={useColorModeValue('whiteAlpha.700', 'whiteAlpha.700')}
+                              color={statisticsHeadingColor}
                               textAlign={"center"}>
                               {st.description}
                             </Heading>
@@ -171,7 +172,7 @@ export default function HeroSection() {
                       <Counter from={0} to={st.toValue} duration={st.duration} size={'md'} />
                       <Heading
                         size='xs'
-                        color={useColorModeValue('whiteAlpha.700', 'whiteAlpha.700')}
+                        color={statisticsHeadingColor}
                         textAlign={"center"}>
                         {st.description}
                       </Heading>

@@ -38,6 +38,7 @@ const statistics = [
 
 export default function StatisticsSection() {
   const fadeIn = useFadeIn();
+  const statisticsSectionHeadingColor = useColorModeValue('primary.800', 'primary.800');
 
   return (
     <Box>
@@ -54,7 +55,7 @@ export default function StatisticsSection() {
             <Heading
               textAlign={"center"}
               mb={6}
-              color={useColorModeValue('primary.800', 'primary.800')}>
+              color={statisticsSectionHeadingColor}>
               Rezultatele proiectelor noastre
             </Heading>
 
