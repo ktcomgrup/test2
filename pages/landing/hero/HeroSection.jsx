@@ -96,7 +96,7 @@ export default function HeroSection() {
               <Button
                 bg={useColorModeValue('primary.800', 'gold.200')}
                 rounded={'full'}
-                color={useColorModeValue('white', 'primary.800')}
+                color={useColorModeValue('white', 'secondary.800')}
                 fontSize={{ base: 14, md: 18 }}
                 minW={36}
                 _hover={{ bg: useColorModeValue('primary.900', 'gold.300') }}>

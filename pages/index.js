@@ -19,8 +19,8 @@ const drawerLinks = [
   //   href: "/",
   // },
   {
-    label: "Despre noi",
-    href: "/about-us",
+    label: "Misiune și viziune",
+    href: "/mission",
   },
   {
     label: "Proiecte",
