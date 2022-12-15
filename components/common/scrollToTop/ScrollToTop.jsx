@@ -4,6 +4,9 @@ import { Box, Button, Tooltip, useColorModeValue } from '@chakra-ui/react';
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
+  const backgroundColor = useColorModeValue('primary.700', 'gold.200');
+  const color = useColorModeValue('white', 'secondary.800');
+  const hoverColor = useColorModeValue('primary.900', 'gold.300');
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -27,8 +30,8 @@ export default function ScrollToTop() {
           mb={1}
           label='Navigează la început'
           hasArrow
-          bg={useColorModeValue('primary.700', 'gold.200')}
-          color={useColorModeValue('white', 'secondary.800')}>
+          bg={backgroundColor}
+          color={color}>
           <Box
             onClick={scrollToTop}
             position='fixed'
@@ -40,10 +43,10 @@ export default function ScrollToTop() {
               size={{ base: "xs", md: "sm" }}
               rightIcon={<MdArrowUpward />}
               borderWidth={1}
-              borderColor={useColorModeValue('white', 'secondary.700')}
-              bg={useColorModeValue('primary.700', 'gold.200')}
-              color={useColorModeValue('white', 'secondary.800')}
-              _hover={{ bg: useColorModeValue('primary.900', 'gold.300') }}>
+              borderColor={color}
+              bg={backgroundColor}
+              color={color}
+              _hover={{ bg: hoverColor }}>
             </Button>
           </Box>
         </Tooltip>
