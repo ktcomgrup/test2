@@ -14,26 +14,14 @@ import MainLoader from "../components/common/loader/MainLoader";
 import LandingPage from "./landing";
 
 const drawerLinks = [
-  // {
-  //   label: "Acasa",
-  //   href: "/",
-  // },
   {
     label: "Misiune și viziune",
-    href: "/mission",
+    href: "/#mission-section",
   },
   {
-    label: "Proiecte",
-    href: "/projects",
+    label: "Pe cine ajutăm",
+    href: "/#help",
   },
-  {
-    label: "Parteneri",
-    href: "/partnerships",
-  },
-  // {
-  //   label: "Media",
-  //   href: "/media",
-  // },
   {
     label: "Implică-te",
     href: "/join-us",
@@ -70,6 +58,11 @@ export default function Index() {
 
   return (
     <>
+      <Head>
+        <title>Implica-te - Fundatia E-Learning</title>
+        <meta name="description" content="e-learning platform" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       {
         !!loading ? (
 

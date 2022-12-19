@@ -10,7 +10,8 @@ import {
   useMediaQuery, SimpleGrid, Spacer,
 } from "@chakra-ui/react";
 import Counter from "../../../components/statistics/Counter";
-import StatsCard from "../../../components/statistics/StatsCard";
+import { TbHeartHandshake } from 'react-icons/tb';
+import { motion } from "framer-motion";
 
 const statistics = [
   {
@@ -44,6 +45,19 @@ const statistics = [
   //   description: "persoane angajate cu succes",
   // }
 ]
+
+const buttonInfiniteScaleVariants = {
+  start: {
+    scale: 1,
+  },
+  end: {
+    scale: 1.1,
+    transition: {
+      duration: 0.7,
+      yoyo: Infinity,
+    }
+  }
+}
 
 export default function HeroSection() {
   const [isLargerThan850] = useMediaQuery('(min-width: 850px)');
@@ -94,29 +108,36 @@ export default function HeroSection() {
             </Heading>
             <Stack direction={'row'} alignItems={"center"}>
               <Button
+                as={motion.div}
+                variants={buttonInfiniteScaleVariants}
+                initial={"start"}
+                animate={"end"}
                 bg={useColorModeValue('primary.800', 'gold.200')}
                 rounded={'full'}
+                rightIcon={<TbHeartHandshake />}
                 color={useColorModeValue('white', 'secondary.800')}
                 fontSize={{ base: 14, md: 18 }}
-                minW={36}
-                _hover={{ bg: useColorModeValue('primary.900', 'gold.300') }}>
+                minW={"180px"}
+                cursor={"pointer"}
+                _hover={{ bg: useColorModeValue('primary.900', 'gold.300') }}
+              >
                 Alătură-te
               </Button>
-              <Text
-                color={'white'}
-                fontWeight={700}
-                lineHeight={1.2}
-                fontSize={{ base: 'md', md: 'md' }}
-              > sau </Text>
-              <Button
-                bg={'whiteAlpha.300'}
-                rounded={'full'}
-                color={'white'}
-                fontSize={{ base: "14", md: 18 }}
-                minW={36}
-                _hover={{ bg: 'whiteAlpha.500' }}>
-                Contactează-ne
-              </Button>
+              {/*<Text*/}
+              {/*  color={'white'}*/}
+              {/*  fontWeight={700}*/}
+              {/*  lineHeight={1.2}*/}
+              {/*  fontSize={{ base: 'md', md: 'md' }}*/}
+              {/*> sau </Text>*/}
+              {/*<Button*/}
+              {/*  bg={'whiteAlpha.300'}*/}
+              {/*  rounded={'full'}*/}
+              {/*  color={'white'}*/}
+              {/*  fontSize={{ base: "14", md: 18 }}*/}
+              {/*  minW={36}*/}
+              {/*  _hover={{ bg: 'whiteAlpha.500' }}>*/}
+              {/*  Contactează-ne*/}
+              {/*</Button>*/}
             </Stack>
             <Spacer />
             {

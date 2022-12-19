@@ -1,15 +1,10 @@
-import { Box, Button, Container, Divider, Heading, Image, SimpleGrid, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Button, Heading, Image, SimpleGrid, Text, useColorModeValue } from "@chakra-ui/react";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
+import ScaleInContainer from "../../../components/common/container";
 
 export default function VisionSection() {
   return (
-    <Container
-      id={"vision-section"}
-      maxW='100%'
-      minW={"100%"}
-      p={0}
-      m={0}
-    >
+    <ScaleInContainer id={"vision-section"}>
       <SimpleGrid columns={[1, null, 2]} spacing={0} minH={{ base: "300px", md: "600px" }} w={"100%"}>
         <Box
           h={"100%"}
@@ -32,12 +27,14 @@ export default function VisionSection() {
           alignItems={"center"}
           justifyContent={"center"}
         >
-          <Heading
+          <Text
+            fontSize={'4xl'}
+            fontWeight={'800'}
             color={useColorModeValue("primary.800", "secondary.800")}
             textAlign={"center"}
           >
             VIZIUNEA NOASTRĂ
-          </Heading>
+          </Text>
           <Text
             fontSize={{ base: "md", md: "lg" }}
             mt={4}
@@ -59,10 +56,10 @@ export default function VisionSection() {
               transform: 'translateX(8px)',
             }}
           >
-            AFLĂ MAI MULTE
+            <Text>AFLĂ MAI MULTE</Text>
           </Button>
         </Box>
       </SimpleGrid>
-    </Container>
+    </ScaleInContainer>
   )
 }

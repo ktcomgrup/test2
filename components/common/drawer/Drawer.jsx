@@ -13,25 +13,40 @@ import Logo from "../theme/Logo";
 import MobileDrawer from "./MobileDrawer";
 import styles from "../../../styles/components/common/Drawer.module.scss";
 import { ColorModeSwitcher } from "../theme";
+import { useEffect, useState } from "react";
 
 export default function Drawer({ links = [] }) {
   const { isOpen, onToggle } = useDisclosure();
   const themeText = useColorModeValue('dark', 'light');
+  // const [drawerBg, setDrawerBg] = useState(useColorModeValue("white", "secondary.800"));
+  // useEffect(() => {
+  //   const changeDrawerColor = () => {
+  //     localStorage.getItem('chakra-ui-color-mode') === "light" ? "white" : "secondary.800"
+  //     if (window.scrollY > 50) {
+  //       setDrawerBg(localStorage.getItem('chakra-ui-color-mode') === "light" ? "white" : "secondary.800");
+  //     } else {
+  //       setDrawerBg("transparent");
+  //     }
+  //   };
+  //   window.addEventListener('scroll', changeDrawerColor);
+  //   return () => window.removeEventListener('scroll', changeDrawerColor);
+  // }, [drawerBg]);
+
 
   return (
     <div className={styles.drawer} id={'top-drawer'}>
       <Box
         w={'full'}
         overflow={"hidden"}
-        bg={useColorModeValue("white", "secondary.800")}
+        bg={useColorModeValue("whiteAlpha.900", "blackAlpha.800")}
+        backdropFilter={"blur(10px)"}
+        // bg={drawerBg}
+        boxShadow='lg'
       >
         <Flex
           minH={'60px'}
           py={{ base: 2 }}
           px={{ base: 4 }}
-          borderBottom={1}
-          borderStyle={'solid'}
-          borderColor={useColorModeValue('secondary.800', 'gold.200')}
         >
           <Flex
             flex={{ base: 1, md: 'auto' }}

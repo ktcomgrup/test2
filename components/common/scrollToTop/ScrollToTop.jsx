@@ -5,7 +5,8 @@ import { Box, Button, Tooltip, useColorModeValue } from '@chakra-ui/react';
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
   const backgroundColor = useColorModeValue('primary.700', 'gold.200');
-  const color = useColorModeValue('white', 'secondary.800');
+  const color = useColorModeValue('transparent', 'secondary.800');
+  const colorIcon = useColorModeValue('white', 'secondary.800');
   const hoverColor = useColorModeValue('primary.900', 'gold.300');
 
   const scrollToTop = () => {
@@ -31,21 +32,21 @@ export default function ScrollToTop() {
           label='Navigează la început'
           hasArrow
           bg={backgroundColor}
-          color={color}>
+          color={colorIcon}>
           <Box
             onClick={scrollToTop}
             position='fixed'
             bottom='20px'
-            right={{ base: "16px", md: "20px" }}
+            right={{ base: "20px", md: "20px" }}
             zIndex={3}>
             <Button
               iconSpacing={0}
-              size={{ base: "xs", md: "sm" }}
+              size={{ base: "sm", md: "md" }}
               rightIcon={<MdArrowUpward />}
               borderWidth={1}
               borderColor={color}
               bg={backgroundColor}
-              color={color}
+              color={colorIcon}
               _hover={{ bg: hoverColor }}>
             </Button>
           </Box>

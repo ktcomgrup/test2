@@ -1,15 +1,10 @@
 import { Box, Button, Container, Divider, Heading, Image, SimpleGrid, Text, useColorModeValue } from "@chakra-ui/react";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
+import ScaleInContainer from "../../../components/common/container";
 
 export default function MissionSection() {
   return (
-    <Container
-      id={"mission-section"}
-      maxW='100%'
-      minW={"100%"}
-      p={0}
-      m={0}
-    >
+    <ScaleInContainer id={"mission-section"}>
       <SimpleGrid columns={[1, null, 2]} spacing={0} minH={{ base: "300px", md: "600px" }} w={"100%"}>
         <Box
           py={5}
@@ -19,12 +14,14 @@ export default function MissionSection() {
           alignItems={"center"}
           justifyContent={"center"}
         >
-          <Heading
+          <Text
+            fontSize={'4xl'}
+            fontWeight={'800'}
             color={useColorModeValue("primary.800", "secondary.800")}
             textAlign={"center"}
           >
             MISIUNEA NOASTRĂ
-          </Heading>
+          </Text>
           <Text
             fontSize={{ base: "md", md: "lg" }}
             mt={4}
@@ -46,10 +43,11 @@ export default function MissionSection() {
               transform: 'translateX(-8px)',
             }}
           >
-            AFLĂ MAI MULTE
+            <Text>AFLĂ MAI MULTE</Text>
           </Button>
         </Box>
-        <Divider display={{ base: "inline-block", md: "none" }} bg={useColorModeValue("secondary.800", "secondary.800")}/>
+        <Divider display={{ base: "inline-block", md: "none" }}
+                 bg={useColorModeValue("secondary.800", "secondary.800")} />
         <Box
           h={"100%"}
           w={"100%"}
@@ -64,6 +62,6 @@ export default function MissionSection() {
             src={"https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"} />
         </Box>
       </SimpleGrid>
-    </Container>
+    </ScaleInContainer>
   )
 }
