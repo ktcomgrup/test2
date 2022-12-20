@@ -29,6 +29,7 @@ export default function ScaleInContainer(props) {
       minW={"100%"}
       p={0}
       m={0}
+      scrollMargin={{ base: "-50px", md: "90px" }}
       as={motion.div}
       ref={containerRef}
       variants={boxVariant}

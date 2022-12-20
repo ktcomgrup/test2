@@ -64,7 +64,7 @@ export default function WebDrawer({ links, linkColor }) {
         ))}
         <ColorModeSwitcher />
         <Link
-          href={"#contact-us"}
+          href={"#contact"}
           _hover={{
             textDecoration: 'none',
           }}

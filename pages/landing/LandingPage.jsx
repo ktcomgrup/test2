@@ -8,6 +8,9 @@ import SectionDivider from "../../components/common/divider";
 import { motion } from "framer-motion";
 import { TbHeartHandshake } from "react-icons/tb";
 import { AiOutlineTeam } from "react-icons/ai";
+import DonationSection from "./donation";
+import ContactSetion from "./contact";
+import FutureSection from "./future";
 
 export default function LandingPage() {
   return (
@@ -23,6 +26,7 @@ export default function LandingPage() {
         borderTopEndRadius={"2xl"}
         borderBottomEndRadius={"2xl"}
         my={4}
+        px={{ base: 4, md: 16 }}
         sectionId={"together"}
         imageSrc={"https://images.unsplash.com/photo-1556484687-30636164638b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"}
       >
@@ -47,6 +51,7 @@ export default function LandingPage() {
         borderTopStartRadius={"2xl"}
         borderBottomStartRadius={"2xl"}
         my={4}
+        px={{ base: 4, md: 16 }}
         sectionId={"innovation"}
         imageSrc={"https://images.unsplash.com/photo-1602026489579-821de7cc8d4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"}
       >
@@ -64,6 +69,7 @@ export default function LandingPage() {
         </Text>
       </SectionDivider>
 
+      <FutureSection />
 
       <SectionDivider
         w={{ base: "65%", md: "75%" }}
@@ -72,6 +78,7 @@ export default function LandingPage() {
         borderTopEndRadius={"2xl"}
         borderBottomEndRadius={"2xl"}
         my={4}
+        px={{ base: 4, md: 16 }}
         sectionId={"join-team"}
         imageSrc={"https://images.unsplash.com/photo-1580893246395-52aead8960dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"}
       >
@@ -108,6 +115,7 @@ export default function LandingPage() {
         borderTopStartRadius={"2xl"}
         borderBottomStartRadius={"2xl"}
         my={4}
+        px={{ base: 4, md: 16 }}
         sectionId={"donate"}
         imageSrc={"https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"}
       >
@@ -137,6 +145,9 @@ export default function LandingPage() {
           Donează
         </Button>
       </SectionDivider>
+
+      <DonationSection />
+      <ContactSetion />
 
       <ScrollToTop />
       <FloatingButton />

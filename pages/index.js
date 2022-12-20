@@ -20,6 +20,10 @@ const drawerLinks = [
   },
   {
     label: "Pe cine ajutăm",
+    href: "/#future",
+  },
+  {
+    label: "Cum poți ajuta și tu",
     href: "/#help",
   },
   {
