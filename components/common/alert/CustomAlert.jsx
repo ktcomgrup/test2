@@ -5,6 +5,7 @@ import { FiSend } from "react-icons/fi";
 export default function CustomAlert(props) {
   const { title = "", description = "", icon = "download", highlight = null, disableHover = false } = props;
   const iconColor = useColorModeValue("white", "#f9eb9e");
+  const textHoverColor = useColorModeValue("primary.200", "secondary.500");
   return (
     <Box my={4}>
       <Box display={"flex"} alignItems={"center"} my={4}>
@@ -45,7 +46,7 @@ export default function CustomAlert(props) {
             cursor={!disableHover ? "pointer" : "unset"}
             color={useColorModeValue("white", "gold.200")}
             _hover={!disableHover ? {
-              color: useColorModeValue("primary.200", "secondary.500"),
+              color: textHoverColor,
               transition: 'all .3s ease-in-out',
             } : null}
           >
@@ -60,7 +61,7 @@ export default function CustomAlert(props) {
             {
               highlight ? <Text
                 fontSize={{ base: "md", md: "lg" }}
-                color={useColorModeValue("white", "white")}
+                color={"white"}
                 ml={{ base: 0, md: 2 }}
               >
                 {highlight}
