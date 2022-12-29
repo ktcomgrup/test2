@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import WebSubNav from "./WebSubNav";
 import { ColorModeSwitcher } from "../theme";
+import NextLink from "next/link";
 
 export default function WebDrawer({ links, linkColor }) {
   const linkC = useColorModeValue(linkColor, linkColor);

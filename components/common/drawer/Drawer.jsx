@@ -13,7 +13,7 @@ import Logo from "../theme/Logo";
 import MobileDrawer from "./MobileDrawer";
 import styles from "../../../styles/components/common/Drawer.module.scss";
 import { ColorModeSwitcher } from "../theme";
-import { useEffect, useState } from "react";
+import NextLink from "next/link";
 
 export default function Drawer({ links = [] }) {
   const { isOpen, onToggle } = useDisclosure();
@@ -67,8 +67,11 @@ export default function Drawer({ links = [] }) {
           <Flex flex={{ base: 1 }} justify={{ base: 'end', md: 'space-around' }} alignItems={'center'} zIndex={99}>
             <Flex>
               <Link href={"/"}>
-                <Logo h={{ base: 10, sm: 10, md: 10, lg: "80px" }} minWidth={{ md: "90px" }}
-                      logoUrl={themeText === "dark" ? "./logo.svg" : "./logo_gold.svg"} />
+                <Logo
+                  h={{ base: 10, sm: 10, md: 10, lg: "80px" }}
+                  minWidth={{ md: "90px" }}
+                  logoUrl={themeText === "dark" ? "./logo.svg" : "./logo_gold.svg"}
+                />
               </Link>
             </Flex>
             <Flex display={{ base: 'none', md: 'flex' }}>

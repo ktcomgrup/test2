@@ -36,6 +36,7 @@ const statistics = [
   }
 ]
 
+// unused
 export default function StatisticsSection() {
   const fadeIn = useFadeIn();
   const statisticsSectionHeadingColor = useColorModeValue('primary.800', 'primary.800');

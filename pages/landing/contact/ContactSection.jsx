@@ -79,7 +79,7 @@ export default function ContactSection() {
       //   setIsButtonLoading(false);
       //   return;
       // }
-      addToast("Thank your for your request.", "success");
+      addToast("Vă mulțumim pentru cerere!", "success");
       setIsButtonLoading(false);
       setName("");
       setEmail("");

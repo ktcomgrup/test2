@@ -1,15 +1,14 @@
-import { Box, Button, Heading, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Button, Text, useColorModeValue } from "@chakra-ui/react";
 import ScrollToTop from "../../components/common/scrollToTop";
 import FloatingButton from "../../components/common/floatingButton";
 import MissionSection from "./mission";
 import HeroSection from "./hero";
 import VisionSection from "./vision";
 import SectionDivider from "../../components/common/divider";
-import { motion } from "framer-motion";
 import { TbHeartHandshake } from "react-icons/tb";
 import { AiOutlineTeam } from "react-icons/ai";
 import DonationSection from "./donation";
-import ContactSetion from "./contact";
+import ContactSection from "./contact";
 import FutureSection from "./future";
 
 export default function LandingPage() {
@@ -147,7 +146,7 @@ export default function LandingPage() {
       </SectionDivider>
 
       <DonationSection />
-      <ContactSetion />
+      <ContactSection />
 
       <ScrollToTop />
       <FloatingButton />

@@ -1,5 +1,6 @@
 import { Box, Flex, Icon, Link, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 import { MdChevronRight, } from 'react-icons/md';
+import NextLink from "next/link";
 
 export default function WebSubNav({ label, href, subLabel }) {
   return (

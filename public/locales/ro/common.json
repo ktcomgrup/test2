@@ -1,7 +1,0 @@
-{
-  "error-with-status": "O eroare cu statusul {{statusCode}} a aparut pe server",
-  "error-without-status": "O eroare a aparut pe server",
-  "language-select": {
-    "placeholder": "Selecteaza o limba"
-  }
-}

@@ -1,5 +1,6 @@
 import { Collapse, Flex, Icon, Link, Stack, Text, useColorModeValue, useDisclosure } from "@chakra-ui/react";
 import { FaChevronDown } from "react-icons/fa";
+import NextLink from "next/link";
 
 export default function MobileNavItem({ label, linkColor, href, children }) {
   const { isOpen, onToggle } = useDisclosure();
