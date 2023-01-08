@@ -1,5 +1,5 @@
 import { motion, useAnimation } from "framer-motion";
-import { Container } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
@@ -23,21 +23,26 @@ export default function ScaleInContainer(props) {
   }, [control, isInView]);
 
   return (
-    <Container
+    <Box
       id={id}
-      maxW={"100%"}
-      minW={"100%"}
+      scrollMarginTop={{ base: "225px", md: "95px" }}
       p={0}
       m={0}
-      scrollMargin={{ base: "-50px", md: "90px" }}
-      as={motion.div}
-      ref={containerRef}
-      variants={boxVariant}
-      initial="hidden"
-      animate={control}
-      {...rest}
     >
-      {children}
-    </Container>
+      <Container
+        maxW={"100%"}
+        minW={"100%"}
+        p={0}
+        m={0}
+        as={motion.div}
+        ref={containerRef}
+        variants={boxVariant}
+        initial="hidden"
+        animate={control}
+        {...rest}
+      >
+        {children}
+      </Container>
+    </Box>
   )
 }

@@ -1,4 +1,3 @@
-import { Head } from "next/document";
 import { ChakraProvider } from '@chakra-ui/react';
 // import { appWithTranslation } from "next-i18next";
 import theme from '/theme/index';

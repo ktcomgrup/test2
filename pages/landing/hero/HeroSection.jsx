@@ -7,11 +7,12 @@ import {
   Text,
   VStack,
   useColorModeValue,
-  useMediaQuery, SimpleGrid, Spacer,
+  useMediaQuery, SimpleGrid, Spacer, Link,
 } from "@chakra-ui/react";
 import Counter from "../../../components/statistics/Counter";
 import { TbHeartHandshake } from 'react-icons/tb';
 import { motion } from "framer-motion";
+import NextLink from "next/link";
 
 const statistics = [
   {
@@ -107,22 +108,26 @@ export default function HeroSection() {
               </Text>
             </Heading>
             <Stack direction={'row'} alignItems={"center"}>
-              <Button
-                as={motion.div}
-                variants={buttonInfiniteScaleVariants}
-                initial={"start"}
-                animate={"end"}
-                bg={useColorModeValue('primary.800', 'gold.200')}
-                rounded={'full'}
-                rightIcon={<TbHeartHandshake />}
-                color={useColorModeValue('white', 'secondary.800')}
-                fontSize={{ base: 14, md: 18 }}
-                minW={"180px"}
-                cursor={"pointer"}
-                _hover={{ bg: useColorModeValue('primary.900', 'gold.300') }}
-              >
-                Alătură-te
-              </Button>
+              <Link as={NextLink} href={"/join"} _hover={{
+                textDecoration: "none"
+              }}>
+                <Button
+                  as={motion.div}
+                  variants={buttonInfiniteScaleVariants}
+                  initial={"start"}
+                  animate={"end"}
+                  bg={useColorModeValue('primary.800', 'gold.200')}
+                  rounded={'full'}
+                  rightIcon={<TbHeartHandshake />}
+                  color={useColorModeValue('white', 'secondary.800')}
+                  fontSize={{ base: 14, md: 18 }}
+                  minW={"180px"}
+                  cursor={"pointer"}
+                  _hover={{ bg: useColorModeValue('primary.900', 'gold.300') }}
+                >
+                  Alătură-te
+                </Button>
+              </Link>
               {/*<Text*/}
               {/*  color={'white'}*/}
               {/*  fontWeight={700}*/}

@@ -1,5 +1,4 @@
-import { Box, Button, Container, Divider, Heading, Image, SimpleGrid, Text, useColorModeValue } from "@chakra-ui/react";
-import { MdOutlineArrowRightAlt } from "react-icons/md";
+import { Box, Divider, Image, SimpleGrid, Text, useColorModeValue } from "@chakra-ui/react";
 import ScaleInContainer from "../../../components/common/container";
 
 export default function MissionSection() {
@@ -32,19 +31,19 @@ export default function MissionSection() {
             profesională, încurajarea ideilor inovatoare, susținerea competitivității și adaptarea educației la
             standardele tehnologice de ultimă generație.
           </Text>
-          <Button
-            mt={2}
-            variant={"ghost"}
-            size={{ base: "xs", md: "md" }}
-            rightIcon={<MdOutlineArrowRightAlt />}
-            color={useColorModeValue("primary.800", "secondary.800")}
-            _hover={{
-              bg: "transparent",
-              transform: 'translateX(-8px)',
-            }}
-          >
-            <Text>AFLĂ MAI MULTE</Text>
-          </Button>
+          {/*<Button*/}
+          {/*  mt={2}*/}
+          {/*  variant={"ghost"}*/}
+          {/*  size={{ base: "xs", md: "md" }}*/}
+          {/*  rightIcon={<MdOutlineArrowRightAlt />}*/}
+          {/*  color={useColorModeValue("primary.800", "secondary.800")}*/}
+          {/*  _hover={{*/}
+          {/*    bg: "transparent",*/}
+          {/*    transform: 'translateX(-8px)',*/}
+          {/*  }}*/}
+          {/*>*/}
+          {/*  <Text>AFLĂ MAI MULTE</Text>*/}
+          {/*</Button>*/}
         </Box>
         <Divider display={{ base: "inline-block", md: "none" }}
                  bg={useColorModeValue("secondary.800", "secondary.800")} />

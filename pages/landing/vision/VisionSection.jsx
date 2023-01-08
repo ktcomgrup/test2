@@ -45,19 +45,19 @@ export default function VisionSection() {
             sănătoasă și prosperă este una inclusivă, care permite tuturor categoriilor de indivizi să se integreze și
             să contribuie pentru binele comun al acesteia.
           </Text>
-          <Button
-            mt={2}
-            variant={"ghost"}
-            size={{ base: "xs", md: "md" }}
-            rightIcon={<MdOutlineArrowRightAlt />}
-            color={useColorModeValue("primary.800", "secondary.800")}
-            _hover={{
-              bg: "transparent",
-              transform: 'translateX(8px)',
-            }}
-          >
-            <Text>AFLĂ MAI MULTE</Text>
-          </Button>
+          {/*<Button*/}
+          {/*  mt={2}*/}
+          {/*  variant={"ghost"}*/}
+          {/*  size={{ base: "xs", md: "md" }}*/}
+          {/*  rightIcon={<MdOutlineArrowRightAlt />}*/}
+          {/*  color={useColorModeValue("primary.800", "secondary.800")}*/}
+          {/*  _hover={{*/}
+          {/*    bg: "transparent",*/}
+          {/*    transform: 'translateX(8px)',*/}
+          {/*  }}*/}
+          {/*>*/}
+          {/*  <Text>AFLĂ MAI MULTE</Text>*/}
+          {/*</Button>*/}
         </Box>
       </SimpleGrid>
     </ScaleInContainer>

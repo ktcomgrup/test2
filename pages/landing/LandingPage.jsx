@@ -1,4 +1,4 @@
-import { Box, Button, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Button, Link, Text, useColorModeValue } from "@chakra-ui/react";
 import ScrollToTop from "../../components/common/scrollToTop";
 import FloatingButton from "../../components/common/floatingButton";
 import MissionSection from "./mission";
@@ -10,6 +10,7 @@ import { AiOutlineTeam } from "react-icons/ai";
 import DonationSection from "./donation";
 import ContactSection from "./contact";
 import FutureSection from "./future";
+import NextLink from "next/link";
 
 export default function LandingPage() {
   return (
@@ -85,26 +86,30 @@ export default function LandingPage() {
           fontSize={{ base: 'xl', md: '4xl' }}
           color={useColorModeValue('white', 'gold.200')}
         >
-          Alătură-te echipei noastre de voluntari</Text>
+          Alătură-te echipei noastre</Text>
         <Text
           fontSize={{ base: 'md', md: 'xl' }}
           color={useColorModeValue('white', 'gold.200')}
         >
           Dacă ești o personă implicată și dorești să ajuți, vino în echipa noastră
         </Text>
-        <Button
-          mt={6}
-          bg={useColorModeValue('white', 'gold.200')}
-          rounded={'full'}
-          rightIcon={<AiOutlineTeam />}
-          color={useColorModeValue('primary.700', 'secondary.800')}
-          fontSize={{ base: 14, md: 18 }}
-          minW={"180px"}
-          cursor={"pointer"}
-          _hover={{ bg: useColorModeValue('primary.50', 'gold.300') }}
-        >
-          Vino în echipă
-        </Button>
+        <Link as={NextLink} href={"/join"} _hover={{
+          textDecoration: "none"
+        }}>
+          <Button
+            mt={6}
+            bg={useColorModeValue('white', 'gold.200')}
+            rounded={'full'}
+            rightIcon={<AiOutlineTeam />}
+            color={useColorModeValue('primary.700', 'secondary.800')}
+            fontSize={{ base: 14, md: 18 }}
+            minW={"180px"}
+            cursor={"pointer"}
+            _hover={{ bg: useColorModeValue('primary.50', 'gold.300') }}
+          >
+            Vino în echipă
+          </Button>
+        </Link>
       </SectionDivider>
 
       <SectionDivider
@@ -130,19 +135,23 @@ export default function LandingPage() {
         >
           Lucrurile bune se fac din inima
         </Text>
-        <Button
-          mt={6}
-          bg={useColorModeValue('white', 'gold.200')}
-          rounded={'full'}
-          rightIcon={<TbHeartHandshake />}
-          color={useColorModeValue('primary.700', 'secondary.800')}
-          fontSize={{ base: 14, md: 18 }}
-          minW={"180px"}
-          cursor={"pointer"}
-          _hover={{ bg: useColorModeValue('primary.50', 'gold.300') }}
-        >
-          Donează
-        </Button>
+        <Link as={NextLink} href={"/donate"} _hover={{
+          textDecoration: "none"
+        }}>
+          <Button
+            mt={6}
+            bg={useColorModeValue('white', 'gold.200')}
+            rounded={'full'}
+            rightIcon={<TbHeartHandshake />}
+            color={useColorModeValue('primary.700', 'secondary.800')}
+            fontSize={{ base: 14, md: 18 }}
+            minW={"180px"}
+            cursor={"pointer"}
+            _hover={{ bg: useColorModeValue('primary.50', 'gold.300') }}
+          >
+            Donează
+          </Button>
+        </Link>
       </SectionDivider>
 
       <DonationSection />

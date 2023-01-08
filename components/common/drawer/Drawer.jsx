@@ -13,25 +13,16 @@ import Logo from "../theme/Logo";
 import MobileDrawer from "./MobileDrawer";
 import styles from "../../../styles/components/common/Drawer.module.scss";
 import { ColorModeSwitcher } from "../theme";
-import NextLink from "next/link";
 
 export default function Drawer({ links = [] }) {
-  const { isOpen, onToggle } = useDisclosure();
+  const { isOpen, onToggle, onClose } = useDisclosure();
   const themeText = useColorModeValue('dark', 'light');
-  // const [drawerBg, setDrawerBg] = useState(useColorModeValue("white", "secondary.800"));
-  // useEffect(() => {
-  //   const changeDrawerColor = () => {
-  //     localStorage.getItem('chakra-ui-color-mode') === "light" ? "white" : "secondary.800"
-  //     if (window.scrollY > 50) {
-  //       setDrawerBg(localStorage.getItem('chakra-ui-color-mode') === "light" ? "white" : "secondary.800");
-  //     } else {
-  //       setDrawerBg("transparent");
-  //     }
-  //   };
-  //   window.addEventListener('scroll', changeDrawerColor);
-  //   return () => window.removeEventListener('scroll', changeDrawerColor);
-  // }, [drawerBg]);
 
+  const handleCollapse = (collapse = false) => {
+    if (collapse) {
+      onClose();
+    }
+  }
 
   return (
     <div className={styles.drawer} id={'top-drawer'}>
@@ -40,7 +31,6 @@ export default function Drawer({ links = [] }) {
         overflow={"hidden"}
         bg={useColorModeValue("whiteAlpha.900", "blackAlpha.800")}
         backdropFilter={"blur(10px)"}
-        // bg={drawerBg}
         boxShadow='lg'
       >
         <Flex
@@ -81,7 +71,11 @@ export default function Drawer({ links = [] }) {
         </Flex>
 
         <Collapse in={isOpen} animateOpacity>
-          <MobileDrawer links={links} linkColor={useColorModeValue("primary.800", "gold.200")} />
+          <MobileDrawer
+            links={links}
+            linkColor={useColorModeValue("primary.800", "gold.200")}
+            handleCollapse={handleCollapse}
+          />
         </Collapse>
       </Box>
     </div>

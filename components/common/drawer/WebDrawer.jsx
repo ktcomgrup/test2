@@ -28,7 +28,7 @@ export default function WebDrawer({ links, linkColor }) {
               <PopoverTrigger>
                 <Link
                   key={`link-${idx}`}
-                  href={item.href ?? '#'}
+                  href={item.href ?? ''}
                   fontSize={'sm'}
                   fontWeight={500}
                   color={linkC}

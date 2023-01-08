@@ -148,7 +148,7 @@ export default function ProcedureInfo35() {
           <CustomAlert
             title={"Trimite-ne FORMULARUL COMPLETAT"}
             description={"după ce ai completat și semnat formularul, trimite-l pe email la adresa "}
-            highlight={"pascuadrianmihai@gmail.com"}
+            highlight={"info@elearningfoundation.ro"}
             icon={"send"}
             disableHover={true}
           />

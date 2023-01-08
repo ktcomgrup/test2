@@ -26,7 +26,7 @@ export default function SectionDivider(props) {
             boxSize={{ base: '80px', md: '180px' }}
             objectFit={"cover"}
             src={imageSrc}
-            alt='Dan Abramov'
+            alt='image'
           />
         </Box>
       </Box>

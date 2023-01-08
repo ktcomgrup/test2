@@ -1,8 +1,7 @@
 import { Stack, useColorModeValue } from "@chakra-ui/react";
 import MobileNavItem from "./MobileNavItem";
-import { ColorModeSwitcher } from "../theme/ColorModeSwitcher";
 
-export default function MobileDrawer({ links, linkColor }) {
+export default function MobileDrawer({ links, linkColor, handleCollapse }) {
   return (
     <Stack
       p={4}
@@ -12,7 +11,7 @@ export default function MobileDrawer({ links, linkColor }) {
       borderColor={useColorModeValue("whiteAlpha.900", "blackAlpha.800")}
     >
       {links.map((item) => (
-        <MobileNavItem key={item.label} linkColor={linkColor} {...item} />
+        <MobileNavItem key={item.label} linkColor={linkColor} {...item} handleCollapse={handleCollapse}/>
       ))}
     </Stack>
   );

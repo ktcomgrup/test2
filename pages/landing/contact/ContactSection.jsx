@@ -1,12 +1,9 @@
 import {
   Flex,
   Box,
-  Heading,
   Text,
-  IconButton,
   Button,
   VStack,
-  HStack,
   FormControl,
   FormLabel,
   Input,
@@ -110,9 +107,9 @@ export default function ContactSection() {
           <Box
             bg={useColorModeValue('primary.700', 'secondary.800')}
             color="white"
-            borderTopRightRadius={{ base: "60px", md: "60px" }}
+            borderTopRightRadius={{ base: "12px", md: "60px" }}
             borderBottomRightRadius={{ base: "0px", md: "60px" }}
-            borderTopLeftRadius={{ base: "60px", md: "0px" }}
+            borderTopLeftRadius={{ base: "12px", md: "0px" }}
             px={{ base: 4, sm: 5, md: 5, lg: 16 }}
             py={{ base: 4, sm: 5, md: 5, lg: 16 }}
           >
@@ -138,6 +135,9 @@ export default function ContactSection() {
                 <Button
                   size="md"
                   variant="ghost"
+                  _hover={{
+                    bg: "whiteAlpha.200"
+                  }}
                   color="white"
                   leftIcon={<MdPhone color={"white"} size="20px" />}>
                   <a href="tel:0728889883">0728 889 883</a>
@@ -145,13 +145,19 @@ export default function ContactSection() {
                 <Button
                   size="md"
                   variant="ghost"
+                  _hover={{
+                    bg: "whiteAlpha.200"
+                  }}
                   color="white"
                   leftIcon={<MdEmail color="white" size="20px" />}>
-                  <a href="mailto:pascuadrianmihai@gmail.com">pascuadrianmihai@gmail.com</a>
+                  <a href="mailto:info@elearningfoundation.ro">info@elearningfoundation.ro</a>
                 </Button>
                 <Button
                   size="md"
                   variant="ghost"
+                  _hover={{
+                    bg: "whiteAlpha.200"
+                  }}
                   color="white"
                   leftIcon={<MdLocationOn color="white" size="20px" />}>
                   București, România
@@ -162,8 +168,8 @@ export default function ContactSection() {
           <Box
             bg="white"
             borderTopLeftRadius={{ base: "0px", md: "60px" }}
-            borderBottomLeftRadius={{ base: "60px", md: "60px" }}
-            borderBottomRightRadius={{ base: "60px", md: "0px" }}
+            borderBottomLeftRadius={{ base: "12px", md: "60px" }}
+            borderBottomRightRadius={{ base: "12px", md: "0px" }}
           >
             <Box m={8} color="blackAlpha.800">
               <VStack spacing={5}>

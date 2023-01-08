@@ -72,6 +72,7 @@ const textVariants = {
 export default function MainLoader({ text }) {
   const themeText = useColorModeValue('dark', 'light');
   const colorText = useColorModeValue('primary.800', 'gold.200');
+  const bg = useColorModeValue('white', 'blackAlpha.800');
   const letters = Array.from(text);
   return (
     <>
@@ -83,6 +84,7 @@ export default function MainLoader({ text }) {
         flexWrap={"wrap"}
         justifyContent={"center"}
         alignItems={"center"}
+        bg={bg}
       >
         <Box
           as={motion.div}

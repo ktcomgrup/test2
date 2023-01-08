@@ -1,6 +1,7 @@
 import { Box, Highlight, Text, useColorModeValue } from '@chakra-ui/react';
 import { MdOutlineFileDownload, MdOutlineDocumentScanner } from "react-icons/md";
 import { FiSend } from "react-icons/fi";
+import { RiNumber1, RiNumber2, RiNumber3 } from "react-icons/ri";
 
 export default function CustomAlert(props) {
   const { title = "", description = "", icon = "download", highlight = null, disableHover = false } = props;
@@ -38,7 +39,33 @@ export default function CustomAlert(props) {
               />
               : null
           }
-
+          {
+            icon === "number1" ?
+              <RiNumber1
+                size={100}
+                color={iconColor}
+                cursor={!disableHover ? "pointer" : "unset"}
+              />
+              : null
+          }
+          {
+            icon === "number2" ?
+              <RiNumber2
+                size={100}
+                color={iconColor}
+                cursor={!disableHover ? "pointer" : "unset"}
+              />
+              : null
+          }
+          {
+            icon === "number3" ?
+              <RiNumber3
+                size={100}
+                color={iconColor}
+                cursor={!disableHover ? "pointer" : "unset"}
+              />
+              : null
+          }
         </Box>
         <Box ml={{ base: 3, md: 4 }}>
           <Text
