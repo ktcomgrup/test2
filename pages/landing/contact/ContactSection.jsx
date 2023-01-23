@@ -58,30 +58,31 @@ export default function ContactSection() {
     let isValidForm = handleValidation();
     if (isValidForm) {
       setIsButtonLoading(true);
-      // const res = await fetch("/api/mailer", {
-      //   body: JSON.stringify({
-      //     email: email,
-      //     name: name,
-      //     phone: phone,
-      //     message: message,
-      //   }),
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   method: "POST",
-      // });
-      // const { error } = await res.json();
-      // if (error) {
-      //   // TODO: add toast
-      //   setIsButtonLoading(false);
-      //   return;
-      // }
-      addToast("Vă mulțumim pentru cerere!", "success");
+      const res = await fetch("/api/sendgrid", {
+        body: JSON.stringify({
+          email: email,
+          name: name,
+          phone: phone,
+          message: message,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
+      const { error, message: msj } = await res.json();
+      if (error) {
+        console.log("EMAIL ERROR", error)
+        addToast("Avem o problema acum. Vă rugăm să încercați mai târziu. Mulțumim!", "error");
+        setIsButtonLoading(false);
+        return;
+      }
+      addToast(msj || "Vă mulțumim pentru cerere", "success");
       setIsButtonLoading(false);
       setName("");
       setEmail("");
-      setMessage("");
       setPhone("");
+      setMessage("");
     }
   };
 
