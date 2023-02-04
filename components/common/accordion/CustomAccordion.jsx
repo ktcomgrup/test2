@@ -5,7 +5,7 @@ import {
   AccordionPanel,
   AccordionIcon,
   Box,
-  useColorModeValue
+  useColorModeValue, Text, UnorderedList, ListItem
 } from "@chakra-ui/react";
 
 export default function CustomAccordion(props) {
@@ -40,8 +40,22 @@ export default function CustomAccordion(props) {
                 </AccordionButton>
               </h2>
               <AccordionPanel py={4}>
-                {a.description}
+                <Text>{a.description}</Text>
+                {
+                  a.children && a.children.length > 0 ? (
+                    a.children.map((c, idx) => {
+                      return (
+                        <UnorderedList key={`list-${idx}`}>
+                          <ListItem>
+                            {c.description}
+                          </ListItem>
+                        </UnorderedList>
+                      )
+                    })
+                  ) : null
+                }
               </AccordionPanel>
+
             </AccordionItem>
           )
         }) : null
