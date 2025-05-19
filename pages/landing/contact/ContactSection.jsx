@@ -100,8 +100,7 @@ export default function ContactSection() {
     <ScaleInContainer id={"contact"} py={6}>
       <Flex bg={useColorModeValue('transparent', 'gold.100')}>
         <SimpleGrid
-          columns={{ base: 1, sm: 1, md: 1 }}
-          // columns={{ base: 1, sm: 1, md: 2 }}
+          columns={{ base: 1, sm: 1, md: 2 }}
           spacing={6}
           m={{ base: 2, sm: 4, md: 6, lg: 10 }}
           px={4}
@@ -168,131 +167,131 @@ export default function ContactSection() {
               </Stack>
             </Box>
           </Box>
-          {/*<Box*/}
-          {/*  bg="white"*/}
-          {/*  borderTopLeftRadius={{ base: "0px", md: "60px" }}*/}
-          {/*  borderBottomLeftRadius={{ base: "12px", md: "60px" }}*/}
-          {/*  borderBottomRightRadius={{ base: "12px", md: "0px" }}*/}
-          {/*>*/}
-          {/*  <Box m={8} color="blackAlpha.800">*/}
-          {/*    <VStack spacing={5}>*/}
-          {/*      <FormControl id="name" isInvalid={errors.name} isRequired>*/}
-          {/*        <FormLabel>Nume</FormLabel>*/}
-          {/*        <InputGroup borderColor="#E0E1E7">*/}
-          {/*          <InputLeftElement*/}
-          {/*            pointerEvents="none"*/}
-          {/*          >*/}
-          {/*            <BsPerson key="person-icon" color="gray.800" />*/}
-          {/*          </InputLeftElement>*/}
-          {/*          <Input*/}
-          {/*            type="text"*/}
-          {/*            size="md"*/}
-          {/*            placeholder='Ionescu Andrei'*/}
-          {/*            focusBorderColor={useColorModeValue("primary.700", "secondary.700")}*/}
-          {/*            value={name}*/}
-          {/*            onChange={(e) => {*/}
-          {/*              setName(e.target.value);*/}
-          {/*            }}*/}
-          {/*            _hover={{*/}
-          {/*              borderColor: useColorModeValue("primary.700", "secondary.700")*/}
-          {/*            }}*/}
-          {/*            _placeholder={{ color: "secondary.700" }}*/}
-          {/*            name="name"*/}
-          {/*          />*/}
-          {/*        </InputGroup>*/}
-          {/*        {errors.name && <FormErrorMessage>Numele este necesar</FormErrorMessage>}*/}
-          {/*      </FormControl>*/}
-          {/*      <FormControl id="email" isInvalid={errors.email} isRequired>*/}
-          {/*        <FormLabel>E-mail</FormLabel>*/}
-          {/*        <InputGroup borderColor="#E0E1E7">*/}
-          {/*          <InputLeftElement*/}
-          {/*            pointerEvents="none"*/}
-          {/*          >*/}
-          {/*            <MdOutlineEmail key="person-email" color="gray.800" />*/}
-          {/*          </InputLeftElement>*/}
-          {/*          <Input*/}
-          {/*            type="email"*/}
-          {/*            size="md"*/}
-          {/*            placeholder='ionescuandrei@email.com'*/}
-          {/*            focusBorderColor={useColorModeValue("primary.700", "secondary.700")}*/}
-          {/*            value={email}*/}
-          {/*            onChange={(e) => {*/}
-          {/*              setEmail(e.target.value);*/}
-          {/*            }}*/}
-          {/*            _hover={{*/}
-          {/*              borderColor: useColorModeValue("primary.700", "secondary.700")*/}
-          {/*            }}*/}
-          {/*            _placeholder={{ color: "secondary.700" }}*/}
-          {/*            name="email"*/}
-          {/*          />*/}
-          {/*        </InputGroup>*/}
-          {/*        {errors.email && <FormErrorMessage>Email-ul este invalid</FormErrorMessage>}*/}
-          {/*      </FormControl>*/}
-          {/*      /!*<FormControl id="phone" isInvalid={errors.phone} isRequired>*!/*/}
-          {/*      <FormControl id="phone">*/}
-          {/*        <FormLabel>Număr de telefon</FormLabel>*/}
-          {/*        <InputGroup>*/}
-          {/*          <InputLeftElement*/}
-          {/*            pointerEvents='none'*/}
-          {/*          >*/}
-          {/*            <MdPhone key="person-phone" color='gray.800' />*/}
-          {/*          </InputLeftElement>*/}
-          {/*          <Input*/}
-          {/*            type='tel'*/}
-          {/*            borderColor="#E0E1E7"*/}
-          {/*            size="md"*/}
-          {/*            placeholder='0123 456 789'*/}
-          {/*            focusBorderColor={useColorModeValue("primary.700", "secondary.700")}*/}
-          {/*            value={phone}*/}
-          {/*            onChange={(e) => {*/}
-          {/*              setPhone(e.target.value);*/}
-          {/*            }}*/}
-          {/*            _hover={{*/}
-          {/*              borderColor: useColorModeValue("primary.700", "secondary.700")*/}
-          {/*            }}*/}
-          {/*            _placeholder={{ color: "secondary.700" }}*/}
-          {/*            name="phone"*/}
-          {/*          />*/}
-          {/*        </InputGroup>*/}
-          {/*        /!*{errors.phone && <FormErrorMessage>Phone is invalid</FormErrorMessage>}*!/*/}
-          {/*      </FormControl>*/}
-          {/*      <FormControl id="message">*/}
-          {/*        <FormLabel>Mesaj</FormLabel>*/}
-          {/*        <Textarea*/}
-          {/*          borderColor="#E0E1E7"*/}
-          {/*          placeholder="Întreabă-ne fără ezitare"*/}
-          {/*          focusBorderColor={useColorModeValue("primary.700", "secondary.700")}*/}
-          {/*          maxH={"200px"}*/}
-          {/*          value={message}*/}
-          {/*          onChange={(e) => {*/}
-          {/*            setMessage(e.target.value);*/}
-          {/*          }}*/}
-          {/*          _hover={{*/}
-          {/*            borderColor: useColorModeValue("primary.700", "secondary.700")*/}
-          {/*          }}*/}
-          {/*          _placeholder={{ color: "secondary.700" }}*/}
-          {/*          name="message"*/}
-          {/*        />*/}
-          {/*      </FormControl>*/}
-          {/*      <FormControl id="submit" float="right">*/}
-          {/*        <Button*/}
-          {/*          onClick={handleSubmit}*/}
-          {/*          isLoading={isButtonLoading}*/}
-          {/*          w={"100%"}*/}
-          {/*          variant="solid"*/}
-          {/*          bg={useColorModeValue("primary.700", "gold.200")}*/}
-          {/*          color={useColorModeValue("white", "secondary.900")}*/}
-          {/*          _hover={{*/}
-          {/*            bg: useColorModeValue("primary.800", "gold.300"),*/}
-          {/*            transform: 'translateY(-2px)',*/}
-          {/*            boxShadow: 'lg',*/}
-          {/*          }}>*/}
-          {/*          Trimite*/}
-          {/*        </Button>*/}
-          {/*      </FormControl>*/}
-          {/*    </VStack>*/}
-          {/*  </Box>*/}
-          {/*</Box>*/}
+          <Box
+            bg="white"
+            borderTopLeftRadius={{ base: "0px", md: "60px" }}
+            borderBottomLeftRadius={{ base: "12px", md: "60px" }}
+            borderBottomRightRadius={{ base: "12px", md: "0px" }}
+          >
+            <Box m={8} color="blackAlpha.800">
+              <VStack spacing={5}>
+                <FormControl id="name" isInvalid={errors.name} isRequired>
+                  <FormLabel>Nume</FormLabel>
+                  <InputGroup borderColor="#E0E1E7">
+                    <InputLeftElement
+                      pointerEvents="none"
+                    >
+                      <BsPerson key="person-icon" color="gray.800" />
+                    </InputLeftElement>
+                    <Input
+                      type="text"
+                      size="md"
+                      placeholder='Ionescu Andrei'
+                      focusBorderColor={useColorModeValue("primary.700", "secondary.700")}
+                      value={name}
+                      onChange={(e) => {
+                        setName(e.target.value);
+                      }}
+                      _hover={{
+                        borderColor: useColorModeValue("primary.700", "secondary.700")
+                      }}
+                      _placeholder={{ color: "secondary.700" }}
+                      name="name"
+                    />
+                  </InputGroup>
+                  {errors.name && <FormErrorMessage>Numele este necesar</FormErrorMessage>}
+                </FormControl>
+                <FormControl id="email" isInvalid={errors.email} isRequired>
+                  <FormLabel>E-mail</FormLabel>
+                  <InputGroup borderColor="#E0E1E7">
+                    <InputLeftElement
+                      pointerEvents="none"
+                    >
+                      <MdOutlineEmail key="person-email" color="gray.800" />
+                    </InputLeftElement>
+                    <Input
+                      type="email"
+                      size="md"
+                      placeholder='ionescuandrei@email.com'
+                      focusBorderColor={useColorModeValue("primary.700", "secondary.700")}
+                      value={email}
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                      }}
+                      _hover={{
+                        borderColor: useColorModeValue("primary.700", "secondary.700")
+                      }}
+                      _placeholder={{ color: "secondary.700" }}
+                      name="email"
+                    />
+                  </InputGroup>
+                  {errors.email && <FormErrorMessage>Email-ul este invalid</FormErrorMessage>}
+                </FormControl>
+                {/*<FormControl id="phone" isInvalid={errors.phone} isRequired>*/}
+                <FormControl id="phone">
+                  <FormLabel>Număr de telefon</FormLabel>
+                  <InputGroup>
+                    <InputLeftElement
+                      pointerEvents='none'
+                    >
+                      <MdPhone key="person-phone" color='gray.800' />
+                    </InputLeftElement>
+                    <Input
+                      type='tel'
+                      borderColor="#E0E1E7"
+                      size="md"
+                      placeholder='0123 456 789'
+                      focusBorderColor={useColorModeValue("primary.700", "secondary.700")}
+                      value={phone}
+                      onChange={(e) => {
+                        setPhone(e.target.value);
+                      }}
+                      _hover={{
+                        borderColor: useColorModeValue("primary.700", "secondary.700")
+                      }}
+                      _placeholder={{ color: "secondary.700" }}
+                      name="phone"
+                    />
+                  </InputGroup>
+                  {/*{errors.phone && <FormErrorMessage>Phone is invalid</FormErrorMessage>}*/}
+                </FormControl>
+                <FormControl id="message">
+                  <FormLabel>Mesaj</FormLabel>
+                  <Textarea
+                    borderColor="#E0E1E7"
+                    placeholder="Întreabă-ne fără ezitare"
+                    focusBorderColor={useColorModeValue("primary.700", "secondary.700")}
+                    maxH={"200px"}
+                    value={message}
+                    onChange={(e) => {
+                      setMessage(e.target.value);
+                    }}
+                    _hover={{
+                      borderColor: useColorModeValue("primary.700", "secondary.700")
+                    }}
+                    _placeholder={{ color: "secondary.700" }}
+                    name="message"
+                  />
+                </FormControl>
+                <FormControl id="submit" float="right">
+                  <Button
+                    onClick={handleSubmit}
+                    isLoading={isButtonLoading}
+                    w={"100%"}
+                    variant="solid"
+                    bg={useColorModeValue("primary.700", "gold.200")}
+                    color={useColorModeValue("white", "secondary.900")}
+                    _hover={{
+                      bg: useColorModeValue("primary.800", "gold.300"),
+                      transform: 'translateY(-2px)',
+                      boxShadow: 'lg',
+                    }}>
+                    Trimite
+                  </Button>
+                </FormControl>
+              </VStack>
+            </Box>
+          </Box>
         </SimpleGrid>
       </Flex>
     </ScaleInContainer>
