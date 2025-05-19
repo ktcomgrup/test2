@@ -81,7 +81,7 @@ export default function CustomAlert(props) {
             } : null}
           >
             {
-              icon === "download" ? <a href='/docs/230_2020_form.pdf' download={"Declaratie_230_din_2022.pdf"}>{title}</a> : <span>{title}</span>
+              icon === "download" ? <a href='/docs/230_2020_form.pdf' download={"Declaratie_230_din_2025.pdf"}>{title}</a> : <span>{title}</span>
             }
           </Text>
           <Box display={"flex"} flexDirection={{ base: "column", md: "row" }}>

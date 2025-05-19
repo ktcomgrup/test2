@@ -68,7 +68,7 @@ export default function ProcedureInfo35() {
           fontSize={{ base: "2xl", md: "4xl" }}
         >
           {/*Redirecționează 3.5% din impozitul datorat statului către noi.*/}
-          Implică-te și tu ! Direcționează 3,5% din impozitul pe venit din anul 2022 către Fundația E-LEARNING !
+          Implică-te și tu ! Direcționează 3,5% din impozitul pe venit din anul 2025 către Fundația E-LEARNING !
         </Text>
 
         <Box>

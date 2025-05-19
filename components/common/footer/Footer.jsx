@@ -18,7 +18,7 @@ export function Footer() {
         <Logo h={{ base: 16, sm: 16, md: 10, lg: "60px" }} minWidth={{ md: "90px" }}
               logoUrl={themeText === "dark" ? "./logo.svg" : "./logo_gold.svg"} />
         <Flex direction={{ base: "column", md: "row" }}>
-          <Text textAlign={"center"} color={useColorModeValue('primary.800', 'gold.200')}>© 2022 E-Learning Foundation.&nbsp;</Text>
+          <Text textAlign={"center"} color={useColorModeValue('primary.800', 'gold.200')}>© 2025 E-Learning Foundation.&nbsp;</Text>
           <Text textAlign={"center"} color={useColorModeValue('primary.800', 'gold.200')}>Toate drepturile rezervate</Text>
         </Flex>
       </Container>
