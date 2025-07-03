@@ -12,12 +12,12 @@
     "@chakra-ui/react": "^2.3.7",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@sendgrid/mail": "^7.7.0",
+    "@sendgrid/mail": "^8.1.5",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.2",
     "framer-motion": "^6.5.1",
     "i18next": "^22.0.5",
-    "next": "13.0.2",
+    "next": "^15.3.4",
     "next-i18next": "^12.1.0",
     "nodemailer": "^7.0.3",
     "react": "18.2.0",
@@ -29,5 +29,18 @@
   },
   "devDependencies": {
     "sass": "^1.56.1"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next-i18next.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ktcomgrup/test2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ktcomgrup/test2/issues"
+  },
+  "homepage": "https://github.com/ktcomgrup/test2#readme"
 }
